@@ -1,0 +1,85 @@
+.search-form .form-group input.form-control::-webkit-input-placeholder{
+  display:none;
+}
+.search-form .form-group input.form-control::-moz-placeholder{
+  display:none;
+}
+.navbar-right{
+	margin-top: 1px;
+  min-width:240px; /*or I can probably just use columns*/
+  right: 10px;
+  position: absolute;
+}
+.navbar-right form{
+  width:100%;
+}
+.form-group{
+  position:relative;
+	width:0%;
+  min-width:38px;
+height:38px;
+width:38px;
+overflow:hidden;
+transition: width 1s;
+backface-visibility:hidden;
+}
+.form-group input.form-control{
+  position:absolute;
+  top:0;
+  right:0;
+  outline:none;
+  width:100%;
+  height:38px;
+  margin:0;
+  z-index:10;
+}
+input[type="text"].form-control{
+  -webkit-appearence:none;
+  -webkit-border-radius:0;
+}
+.form-control-submit,
+.search-label{
+  color:white;
+  width:38px;
+  height:38px;
+  position:absolute;
+  right:0;
+  top:0;
+  padding:0;
+  margin:0;
+  text-align:center;
+  cursor:pointer;
+  line-height:38px;
+  background:#293a4a;
+}
+.form-control-submit{
+  opacity: 0;
+  color:transparent;
+  border:none;
+  outline:none;
+  z-index:-1;
+}
+.search-label{
+  z-index:90;
+}
+.form-group.sb-search-open,
+.no-js .sb-search-open{
+  width:100%;
+}
+.form-group.sb-search-open .search-label,
+.no-js .sb-search .search-label {
+	/*background: black;*/
+	color:#808080;
+	z-index: 11;
+}
+
+.search-label:hover {
+	/*background: #A9A9A9;*/
+	color:#808080;
+	z-index: 11;
+}
+
+.form-group.sb-search-open .form-control-submit,
+.no-js .form-control .form-control-submit {
+	z-index: 90;
+}

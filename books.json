@@ -1,0 +1,22 @@
+[
+	{"name":"Kürk Mantolu Madonna", "author":"Sabahattin Ali", "publisher":"Yapı Kredi Yayınları", "image":"/img/kurkMantoluMadonna.jpg"},
+	{"name":"Küçük Prens", "author":"Antoine De Saint-Exupéry", "publisher":"Can Çocuk Yayınları", "image":"/img/kucukPrens.jpg"},
+	{"name":"Dönüşüm", "author":"Franz Kafka", "publisher":"Türkiye İş Bankası Kültür Yayınları", "image":"/img/donusum.jpg"},
+	{"name":"Uçurtma Avcısı", "author":"Khaled Hosseini", "publisher":"Everest Yayınları", "image":"/img/ucurtmaAvcisi.jpg"},
+	{"name":"Simyacı", "author":"Paulo Coelho", "publisher":"Can Yayınları", "image":"/img/simyaci.jpg"},
+	{"name":"Satranç", "author":"Stefan Zweig", "publisher":"İş Bankası Kültür Yayınları", "image":"/img/satranc.jpg"},
+	{"name":"Şeker Portakalı", "author":"Jose Mauro De Vasconcelos", "publisher":"Can Yayınları", "image":"/img/sekerPortakali.jpg"},
+	{"name":"Hayvan Çiftliği", "author":"George Orwell", "publisher":"Can Yayınları", "image":"/img/hayvanCiftligi.jpg"},
+	{"name":"Suç ve Ceza", "author":"Dostoyevski", "publisher":"İş Bankası Kültür Yayınları", "image":"/img/sucVeCeza.jpg"},
+	{"name":"Olasılıksız", "author":"Adam Fawer", "publisher":"April Yayıncılık", "image":"/img/olasiliksiz.jpg"},
+	{"name":"Fareler ve İnsanlar", "author":"John Steinbeck", "publisher":"Sel Yayıncılık", "image":"/img/farelerVeInsanlar.jpg"},
+	{"name":"Çalıkuşu", "author":"Reşat Nuri Güntekin", "publisher":"İnkılap Kitabevi", "image":"/img/calikusu.jpg"},
+	{"name":"Aşk", "author":"Elif Şafak", "publisher":"Doğan Kitap", "image":"/img/ask.jpg"},
+	{"name":"Kuyucaklı Yusuf", "author":"Sabahattin Ali", "publisher":"Yapı Kredi Yayınları", "image":"/img/kuyucakliYusuf.jpg"},
+	{"name":"Bilinmeyen Bir Kadının Mektubu", "author":"Stefan Zweig", "publisher":"İş Bankası Kültür Yayınları", "image":"/img/bilinmeyenBirKadininMektubu.jpg"},
+	{"name":"1984(Bin Dokuz Yüz Seksen Dört)", "author":"George Orwell", "publisher":"Can Yayınları", "image":"/img/1984.jpg"},
+	{"name":"Sefiller", "author":"Victor Hugo", "publisher":"İş Bankası Kültür Yayınları", "image":"/img/sefiller.jpg"},
+	{"name":"Bin Muhteşem Güneş", "author":"Khaled Hosseini", "publisher":"Everest Yayınları", "image":"/img/binMuhtesemGunes.jpg"},
+	{"name":"İnsan Neyle Yaşar", "author":"Lev Nikolayeviç", "publisher":"İş Bankası Kültür Yayınları", "image":"/img/insanNeyleYasar.jpg"},
+	{"name":"Serenad", "author":"Zülfü Livaneli", "publisher":"Doğan Kitap", "image":"/img/serenad.jpg"}
+]

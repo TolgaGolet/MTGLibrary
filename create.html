@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Kitap Ekle MTGLibrary</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Content delivery network (CDN)-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<!--Content delivery network (CDN)-->
+	<link rel="stylesheet" href="css/SocialMediaButtons.css">
+	<link rel="stylesheet" href="css/w3.css">
+<style>
+#welcomeMessage {
+		color:rgba(255, 255, 255, 0.8);
+		margin-top:8px;
+		margin-right:4px;
+		margin-bottom:0px;
+	}
+</style>
+</head>
+<body style="background-color:#A9A9A9" onload="getName(false)">
+<nav style="font-weight:bold; background-color:#293a4a; border-bottom-style:solid;" class="navbar navbar-expand-sm navbar-dark">
+  <a class="navbar-brand" href="/index2.php">MTGLibrary</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+	  <li class="nav-item">
+        <p id="welcomeMessage" onclick="getName(true)">Hoş geldiniz</p>
+	  </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/index2.php"><i class="fa fa-book"></i> Kitaplar</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container" style="background-color:white; border-left:solid; border-right:solid;">
+	<div class="row">
+		<div class="col-sm-4" style="margin:auto;">
+			<div id="content" style="text-align:center; margin-bottom:10px;">
+				<h2>Yeni Kitap Ekle</h2>
+				<form id="bookAddingForm" action="submit.php" method="post" enctype="multipart/form-data">
+					<hr>
+					Kitabın Adı:<br>
+					<input type="text" name="bookName" id="bookName" placeholder="Kitap Adı" maxlength="40" autofocus required>
+					<br><hr>
+					Kitabın Yazarı:<br>
+					<input type="text" name="author" id="author" placeholder="Kitap Yazarı" maxlength="40" required>
+					<br><hr>
+					Yayınevi:<br>
+					<input type="text" name="publisher" id="publisher" placeholder="Kitap Yayınevi" maxlength="50" required>
+					<br><hr>
+					Yetki Kodu:<br>
+					<input type="password" name="authorizationCode" id="authorizationCode" placeholder="Yetki Kodu" maxlength="50" required>
+					<br><hr>
+					Kitap Resmi:<br>
+					<input type="file" name="imageFile" id="imageFile" accept="image/*" required>
+					<br><hr>
+					<input type="submit" value="Kitabı Ekle" onclick="">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="jumbotron text-center" style="margin-bottom:0px; background-color:#293a4a; border-top-style:solid;">
+	<a href="" class="fa fa-linkedin social"></a>
+	<a href="" class="fa fa-instagram social"></a>
+	<a href="" class="fa fa-twitter social"></a>
+	<br>
+	<a href='' style="color:white">@gmail.com</a>
+</div>
+<script>
+function getName(reset) {
+	if(reset==true) document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+	var readCookie = document.cookie;
+	if(readCookie==null||readCookie=="") {
+		var person = prompt("Hoş geldiniz. Lütfen isminizi yazınız:", "İsim vermek istemiyorum.");
+		if(person=="İsim vermek istemiyorum."||person==null) document.cookie="username="+"";
+		else document.cookie = "username="+person;
+		prepareMessage(person);
+	}
+	else {
+		var person="";
+		var cname="username";
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(readCookie);
+		var ca = decodedCookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				person=c.substring(name.length, c.length);
+				prepareMessage(person);
+				break;
+			}
+		}
+	}
+}
+
+function prepareMessage(person) {
+	var date=new Date();
+	var hour=date.getHours();
+
+	if(person=="İsim vermek istemiyorum."||person==null||person=="") {
+		if(hour>=6&&hour<=11) document.getElementById("welcomeMessage").innerHTML="Günaydın";
+		else if(hour>11&&hour<17) document.getElementById("welcomeMessage").innerHTML="İyi Günler";
+		else if(hour>=17&&hour<23) document.getElementById("welcomeMessage").innerHTML="İyi Akşamlar";
+		else if(hour==23||hour<6) document.getElementById("welcomeMessage").innerHTML="İyi Geceler";
+	}
+	else {
+		if(hour>=6&&hour<=11) document.getElementById("welcomeMessage").innerHTML="Günaydın, "+person;
+		else if(hour>11&&hour<17) document.getElementById("welcomeMessage").innerHTML="İyi Günler, "+person;
+		else if(hour>=17&&hour<23) document.getElementById("welcomeMessage").innerHTML="İyi Akşamlar, "+person;
+		else if(hour==23||hour<6) document.getElementById("welcomeMessage").innerHTML="İyi Geceler, "+person;
+	}
+}
+</script>
+</body>
+</html>
